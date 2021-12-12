@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "863192276679",
+    "firebase_url": "https://addrop.firebaseio.com",
+    "project_id": "addrop",
+    "storage_bucket": "addrop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863192276679:android:2611a6b418936fc9bea8e2",
+        "android_client_info": {
+          "package_name": "com.example.addrop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863192276679-l17v1dclam9mj6qlbne7ual25gcvivfv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.addrop",
+            "certificate_hash": "c9b8b1731c21d050076e211b2cd43b0d6e5af9d4"
+          }
+        },
+        {
+          "client_id": "863192276679-kk0s2ngbcnqh36ajffedblmulscbtrn5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTJsxLQFE-Y89yf1A3Q0YVcEqSCz-xIlU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "863192276679-kk0s2ngbcnqh36ajffedblmulscbtrn5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/WhiteColor"
+    tools:context=".home_fragment"
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_marginBottom="60dp"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:id="@+id/dropRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/logo_bracu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/bracu_logo"
+                android:textAlignment="gravity" />
+
+
+            <TextView
+                android:id="@+id/drop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@+id/logo_bracu"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/aladin"
+                android:textColor="@color/blackColor"
+                android:text="Want to Drop"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:id="@+id/dropLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/drop">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/dropCourseName"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_weight="0.8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drop"
+                    android:hint="Course Name"
+                    app:boxCornerRadiusBottomEnd="16dp"
+                    app:boxCornerRadiusBottomStart="16dp"
+                    app:boxCornerRadiusTopEnd="16dp"
+                    app:boxCornerRadiusTopStart="16dp"
+                    app:boxStrokeColor="#070707"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="dropdown_menu"
+                    app:endIconTint="#070707"
+                    app:helperText="Course Name Here"
+                    app:hintTextColor="#070707"
+                    app:startIconTint="#070707">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/dropCourseNameText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aladin"
+                        android:inputType="text"
+                        android:textColor="#070707"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/dropCourseSection"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Section"
+                    android:layout_marginLeft="5dp"
+                    app:boxCornerRadiusBottomEnd="16dp"
+                    app:boxCornerRadiusBottomStart="16dp"
+                    app:boxCornerRadiusTopEnd="16dp"
+                    app:boxCornerRadiusTopStart="16dp"
+                    app:boxStrokeColor="#070707"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="dropdown_menu"
+                    app:endIconTint="#070707"
+                    app:helperText="Section Here"
+                    app:hintTextColor="#070707"
+                    app:startIconTint="#070707">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/dropCourseSecText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aladin"
+                        android:inputType="number"
+                        android:textColor="#070707"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:layout_below="@id/dropLinearLayout"
+                android:background="#070707"/>
+
+            <TextView
+                android:id="@+id/add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/aladin"
+                android:textColor="@color/blackColor"
+                android:text="Want to Add"
+                android:layout_below="@+id/line"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/addlinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/add">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addCourseName"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_weight="0.8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/addlinearLayout"
+                    android:hint="Course Name"
+                    app:boxCornerRadiusBottomEnd="16dp"
+                    app:boxCornerRadiusBottomStart="16dp"
+                    app:boxCornerRadiusTopEnd="16dp"
+                    app:boxCornerRadiusTopStart="16dp"
+                    app:boxStrokeColor="#070707"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="dropdown_menu"
+                    app:endIconTint="#070707"
+                    app:helperText="Course Name Here"
+                    app:hintTextColor="#070707"
+                    app:startIconTint="#070707">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/addCourseNameText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aladin"
+                        android:inputType="text"
+                        android:textColor="#070707"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/addCourseSection"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_weight="0.5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Section"
+                    android:layout_marginLeft="5dp"
+                    app:boxCornerRadiusBottomEnd="16dp"
+                    app:boxCornerRadiusBottomStart="16dp"
+                    app:boxCornerRadiusTopEnd="16dp"
+                    app:boxCornerRadiusTopStart="16dp"
+                    app:boxStrokeColor="#070707"
+                    app:boxStrokeWidthFocused="2dp"
+                    app:endIconMode="dropdown_menu"
+                    app:endIconTint="#070707"
+                    app:helperText="Section Here"
+                    app:hintTextColor="#070707"
+                    app:startIconTint="#070707">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/addCourseSecText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/aladin"
+                        android:inputType="number"
+                        android:textColor="#070707"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addlinearLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/custom_button2"
+                android:fontFamily="@font/aladin"
+                android:onClick="letSubmit"
+                android:padding="20dp"
+                android:text="Submit"
+                android:textColor="@color/WhiteColor"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                tools:ignore="OnClick" />
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+</FrameLayout>

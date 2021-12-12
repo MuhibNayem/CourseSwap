@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".history_fragment">
+
+
+    <TextView
+        android:id="@+id/drop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/aladin"
+        android:text="Want to Add"
+        android:textColor="@color/blackColor"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/dropLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/drop"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addCourseName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/drop"
+            android:layout_weight="0.8"
+            android:hint="Course Name"
+            app:boxCornerRadiusBottomEnd="16dp"
+            app:boxCornerRadiusBottomStart="16dp"
+            app:boxCornerRadiusTopEnd="16dp"
+            app:boxCornerRadiusTopStart="16dp"
+            app:boxStrokeColor="#070707"
+            app:boxStrokeWidthFocused="2dp"
+            app:endIconMode="dropdown_menu"
+            app:endIconTint="#070707"
+            app:helperText="Course Name Here"
+            app:hintTextColor="#070707"
+            app:startIconTint="#070707">
+
+            <AutoCompleteTextView
+                android:id="@+id/addCourseNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aladin"
+                android:inputType="text"
+                android:textColor="#070707"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/addCourseSection"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.5"
+            android:hint="Section"
+            app:boxCornerRadiusBottomEnd="16dp"
+            app:boxCornerRadiusBottomStart="16dp"
+            app:boxCornerRadiusTopEnd="16dp"
+            app:boxCornerRadiusTopStart="16dp"
+            app:boxStrokeColor="#070707"
+            app:boxStrokeWidthFocused="2dp"
+            app:endIconMode="dropdown_menu"
+            app:endIconTint="#070707"
+            app:helperText="Section Here"
+            app:hintTextColor="#070707"
+            app:startIconTint="#070707">
+
+            <AutoCompleteTextView
+                android:id="@+id/addCourseSecText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aladin"
+                android:inputType="number"
+                android:textColor="#070707"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/search_icon">
+
+        </Button>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            android:layout_margin="10dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

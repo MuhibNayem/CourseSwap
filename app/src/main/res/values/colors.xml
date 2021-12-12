@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#006257</color>
+    <color name="colorPrimaryDark">#005048</color>
+    <color name="colorAccent">#E6E6E6</color>
+    <color name="colorLightGreen">#ddfada </color>
+    <color name="blackColor">#000000</color>
+    <color name="WhiteColor">#FFFFFF</color>
+    <color name="btColor">#afcae5</color>
+    <color name="whiteGreen">#e1ead9</color>
+    <color name="search">#e1ead9</color>
+    <color name="home">#e1ead9</color>
+    <color name="grey">#8C8C8C</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="crimson">#DC143C</color>
+
+</resources>

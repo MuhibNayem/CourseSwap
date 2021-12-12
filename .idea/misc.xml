@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/drawable-v24/rounded_dialog.xml" value="0.3638888888888889" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/drawable/custom_button.xml" value="0.14722222222222223" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/drawable/custom_button2.xml" value="0.1" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/drawable/custom_dialog_background.xml" value="0.3728205128205128" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/drawable/item_selector.xml" value="0.1" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/drawable/no_record_found.xml" value="0.21510416666666668" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/drawable/rounded_alert_box.xml" value="0.21510416666666668" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/drawable/rounded_corner.xml" value="0.1" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/drawable/search_icon.xml" value="0.1" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/activity_booking.xml" value="0.3625" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/activity_forget_pass.xml" value="0.3625" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/activity_home.xml" value="0.18" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/activity_home_activity.xml" value="0.13815789473684212" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/activity_login.xml" value="0.3625" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/activity_registration.xml" value="0.3625" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/activity_search.xml" value="0.10824742268041238" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/activity_setting.xml" value="0.25" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/app_bar_layout.xml" value="0.3625" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/course_item.xml" value="0.3625" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/custom_dialog_layout.xml" value="0.3625" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/dropdown_items.xml" value="0.3625" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/fragment_bottom_sheet.xml" value="0.3625" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/fragment_history.xml" value="0.25" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/fragment_home_fragment.xml" value="0.1" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/fragment_homw_fragment.xml" value="0.1" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/fragment_search_fragment.xml" value="0.18" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/no_record_found.xml" value="0.19895833333333332" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/not_found_dialog.xml" value="0.3625" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/rounded_corner.xml" value="0.17603850050658562" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/same_course_alert.xml" value="0.228125" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/student_details_list.xml" value="0.33" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/menu/bottom_menu.xml" value="0.3212962962962963" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/menu/menu.xml" value="0.3625" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/menu/settings_activity_menu.xml" value="0.3625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
