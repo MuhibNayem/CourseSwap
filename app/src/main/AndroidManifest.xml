@@ -18,7 +18,8 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".BookingActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
         <activity
             android:name=".home_activity">
             <intent-filter>
@@ -27,11 +28,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ForgetPassActivity" />
-        <activity android:name=".SearchActivity" />
-        <activity android:name=".SettingActivity" />
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".ForgetPassActivity"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:name=".SearchActivity"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:name=".SettingActivity"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:name=".RegistrationActivity"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity android:name=".LoginActivity"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
 
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
