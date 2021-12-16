@@ -112,10 +112,10 @@
                 android:id="@+id/line"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
+                android:layout_below="@id/dropLinearLayout"
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="20dp"
-                android:layout_below="@id/dropLinearLayout"
-                android:background="#070707"/>
+                android:background="#070707" />
 
             <TextView
                 android:id="@+id/add"

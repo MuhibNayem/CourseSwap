@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">Addrop</string>
 
+    <string name="app_name">Addrop</string>
+    <string name="my_underlined_text"><u>Personal Information:</u></string>
+    <string name="editPersonalInfo_underlined_text"><u>Edit Information:</u></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -158,7 +158,7 @@ public class home_activity extends AppCompatActivity {
         _loadingbar = new ProgressDialog(this);
 
         if (item.getItemId() == R.id.main_settings_btn) {
-            startActivity(new Intent(getApplicationContext(),SettingActivity.class));
+            startActivity(new Intent(getApplicationContext(),ActivitySetting.class));
             //finish();
         }
         if (item.getItemId() == R.id.main_logout_btn) {

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
@@ -12,9 +13,12 @@ import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -39,12 +43,13 @@ import java.util.HashMap;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class SettingActivity extends AppCompatActivity {
+public class ActivitySetting extends AppCompatActivity {
 
-    private Button updateAcc;
-    private TextInputEditText student_ID, fullname, username, phoneNum, email;
+
+    private TextView student_ID, fullname, username, phoneNum, email;
     private EditText status;
     private CircleImageView userProfilePic;
+    private ImageView editIcon;
     private ProgressDialog loadingBar;
     private DatabaseReference reference;
     private FirebaseAuth userAuth;
@@ -53,6 +58,9 @@ public class SettingActivity extends AppCompatActivity {
     private StorageReference userProfilePicRef;
     Uri imageuri = null;
 
+    private Dialog dialog;
+    Button Okay;
+
     String emailString;
 
     private Toolbar mToolBar;
@@ -60,21 +68,12 @@ public class SettingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_setting);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setContentView(R.layout.settings_layout);
 
         initializeFileds();
 
         emailString = getIntent().getStringExtra("email");
-
-
-        updateAcc.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                updateSettings();
-                loadingBar.show();
-            }
-        });
 
         retriveUserInfo();
 
@@ -89,8 +88,6 @@ public class SettingActivity extends AppCompatActivity {
         });
 
 
-
-
     }
 
     private void cropImage() {
@@ -101,14 +98,13 @@ public class SettingActivity extends AppCompatActivity {
     }
 
     private void initializeFileds() {
-
-        updateAcc = findViewById(R.id.update_btn);
-        student_ID = findViewById(R.id.user_id_txt);
+        student_ID = findViewById(R.id.std_ID);
         userProfilePic = findViewById(R.id.profile_image);
         phoneNum = findViewById(R.id.std_phoneNum);
-        username = findViewById(R.id.regi_username_txt);
-        fullname = findViewById(R.id.regi_fullname_txt);
-        email = findViewById(R.id.regi_userEmail_txt);
+        username = findViewById(R.id.std_username);
+        fullname = findViewById(R.id.std_fullname);
+        email = findViewById(R.id.std_email);
+        editIcon = findViewById(R.id.editBtn);
 
         reference = FirebaseDatabase.getInstance().getReference();
         userAuth = FirebaseAuth.getInstance();
@@ -122,6 +118,15 @@ public class SettingActivity extends AppCompatActivity {
         loadingBar.setTitle("Updating");
         loadingBar.setMessage("Please wait....");
         loadingBar.setCanceledOnTouchOutside(true);
+
+        editIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                edit();
+            }
+        });
+
+
 
     }
 
@@ -190,7 +195,7 @@ public class SettingActivity extends AppCompatActivity {
             @Override
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
-                Toast.makeText(SettingActivity.this, "Image Uploaded Successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ActivitySetting.this, "Image Uploaded Successfully", Toast.LENGTH_SHORT).show();
                 StorageReference profilePicRef = FirebaseStorage.getInstance().getReference().child(currentUserID+".jpg");
 
                 profilePicRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
@@ -207,7 +212,7 @@ public class SettingActivity extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 String massage = e.toString().trim();
-                Toast.makeText(SettingActivity.this, "Error: " + massage, Toast.LENGTH_SHORT).show();
+                Toast.makeText(ActivitySetting.this, "Error: " + massage, Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -220,120 +225,7 @@ public class SettingActivity extends AppCompatActivity {
         finish();
     }
 
-    private void updateSettings() {
-        final String setStudentID = student_ID.getText().toString().trim();
-        final String phonenum = phoneNum.getText().toString().trim();
-        final String fullName = fullname.getText().toString().trim();
-        final String userName = username.getText().toString().trim();
-        final String useremail = email.getText().toString().trim();
-        loadingBar.show();
 
-
-
-        if (TextUtils.isEmpty(setStudentID)) {
-            student_ID.setError("Field Can not be empty");
-            loadingBar.dismiss();
-        }
-
-        if (!validateFullname() | !validatePhoneNumber() | !validateUsername() | !validateUSerEmail()) {
-            loadingBar.dismiss();
-            return;
-        } else {
-
-
-
-            HashMap<String, String> profileMap = new HashMap<>();
-            profileMap.put("username", userName);
-            profileMap.put("name", fullName);
-            profileMap.put("phone", phonenum);
-            profileMap.put("Student ID", setStudentID);
-            profileMap.put("User ID", currentUserID);
-            profileMap.put("email", useremail);
-
-
-
-
-
-            reference.child("Users").child(currentUserID).setValue(profileMap)
-                    .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-
-                            if (task.isSuccessful()) {
-                                loadingBar.dismiss();
-                                goToMainActivity();
-                                Toast.makeText(SettingActivity.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
-                            } else {
-                                String massage = task.getException().toString().trim();
-                                Toast.makeText(SettingActivity.this, "Error :" + massage, Toast.LENGTH_SHORT).show();
-                            }
-
-                        }
-                    });
-
-        }
-    }
-
-    public void goToMainActivity() {
-        Intent mainIntent = new Intent(SettingActivity.this, home_activity.class);
-        mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivity(mainIntent);
-        finish();
-    }
-
-    private boolean validateFullname() {
-        String val = fullname.getText().toString().trim();
-
-        if (val.isEmpty()) {
-            fullname.setError("Field can not be empty");
-            return false;
-        } else {
-            fullname.setError(null);
-            return true;
-        }
-    }
-
-    private boolean validateUsername() {
-        String val = username.getText().toString().trim();
-        String checkSpaces = "\\A\\w{1,20}\\z";
-
-        if (val.isEmpty()) {
-            username.setError("Field can not be empty");
-            return false;
-        } else if (val.length() > 20) {
-            username.setError("Username is too large");
-            return false;
-        } else if (!val.matches(checkSpaces)) {
-            username.setError("No white spaces");
-            return false;
-        } else {
-            username.setError(null);
-
-            return true;
-        }
-    }
-
-    private boolean validatePhoneNumber() {
-        String phonenum = phoneNum.getText().toString().trim();
-        if (phonenum.isEmpty()) {
-            phoneNum.setError("Field can't be empty");
-            return false;
-        } else {
-            phoneNum.setError(null);
-            return true;
-        }
-    }
-
-    private boolean validateUSerEmail() {
-        String userEmail = email.getText().toString().trim();
-        if (userEmail.isEmpty()) {
-            email.setError("Field can't be empty");
-            return false;
-        } else {
-            email.setError(null);
-            return true;
-        }
-    }
 
     private void retriveUserInfo() {
 
@@ -381,7 +273,7 @@ public class SettingActivity extends AppCompatActivity {
                         }
 
                         else
-                            Toast.makeText(SettingActivity.this, "Please update information", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(ActivitySetting.this, "Please update information", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -394,7 +286,9 @@ public class SettingActivity extends AppCompatActivity {
     }
 
 
-    public void edit(View view) {
-
+    public void edit() {
+        UpdateSetting_BottomSheet updateSetting_bottomSheet = new UpdateSetting_BottomSheet(emailString);
+        updateSetting_bottomSheet.show(getSupportFragmentManager(),updateSetting_bottomSheet.getTag());
     }
+
 }

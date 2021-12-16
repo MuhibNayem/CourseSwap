@@ -7,6 +7,7 @@
         <entry key="..\:/projects/CourseSwap/app/src/main/res/drawable/custom_button.xml" value="0.14722222222222223" />
         <entry key="..\:/projects/CourseSwap/app/src/main/res/drawable/custom_button2.xml" value="0.1" />
         <entry key="..\:/projects/CourseSwap/app/src/main/res/drawable/custom_dialog_background.xml" value="0.3728205128205128" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/drawable/icon_edit.xml" value="0.36203703703703705" />
         <entry key="..\:/projects/CourseSwap/app/src/main/res/drawable/item_selector.xml" value="0.1" />
         <entry key="..\:/projects/CourseSwap/app/src/main/res/drawable/no_record_found.xml" value="0.21510416666666668" />
         <entry key="..\:/projects/CourseSwap/app/src/main/res/drawable/rounded_alert_box.xml" value="0.21510416666666668" />
@@ -29,10 +30,12 @@
         <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/fragment_home_fragment.xml" value="0.1" />
         <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/fragment_homw_fragment.xml" value="0.1" />
         <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/fragment_search_fragment.xml" value="0.18" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/fragment_update_setting__bottom_sheet.xml" value="0.3625" />
         <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/no_record_found.xml" value="0.19895833333333332" />
         <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/not_found_dialog.xml" value="0.3625" />
         <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/rounded_corner.xml" value="0.17603850050658562" />
         <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/same_course_alert.xml" value="0.228125" />
+        <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/settings_layout.xml" value="0.3625" />
         <entry key="..\:/projects/CourseSwap/app/src/main/res/layout/student_details_list.xml" value="0.33" />
         <entry key="..\:/projects/CourseSwap/app/src/main/res/menu/bottom_menu.xml" value="0.3212962962962963" />
         <entry key="..\:/projects/CourseSwap/app/src/main/res/menu/menu.xml" value="0.3625" />
